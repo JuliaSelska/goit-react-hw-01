@@ -1,32 +1,29 @@
-import css from '../Profile/Profile.module.css'
+import css from './Profile.module.css'
 
 
-const Profile = ({ name, tag, location, image, stats }) => {
+const Profile = ({ name, tag, location, image, stats: { followers, views, likes }, }) => {
 
     return (
-        <div className="profile">
-            <div className="profile - info">
-                <img className="avatar"
-                    src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-                    alt="User avatar"
-                />
-                <p className="name">Petra Marica</p>
-                <p className="tag">@pmarica</p>
-                <p className="location">Salvador, Brasil</p>
+        <div className={css.profile}>
+            <div className={css.info}>
+                <img className={css.avatar} src={image} alt="User avatar" />
+                <p className={css.name}>{name}</p>
+                <p className={css.tag}>@{tag}</p>
+                <p className={css.location}>{location}</p>
             </div>
 
-            <ul className="stats">
-                <li className="stats-li">
+            <ul className={css.stats}>
+                <li className={css.item}>
                     <span>Followers</span>
-                    <span>1000</span>
+                    <span className={css.itemInfo}>{followers}</span>
                 </li>
-                <li>
+                <li className={css.item}>
                     <span>Views</span>
-                    <span>2000</span>
+                    <span className={css.itemInfo}>{views}</span>
                 </li>
-                <li>
+                <li className={css.item}>
                     <span>Likes</span>
-                    <span>3000</span>
+                    <span className={css.itemInfo}>{likes}</span>
                 </li>
             </ul>
         </div>

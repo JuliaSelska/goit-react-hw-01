@@ -1,18 +1,21 @@
 .profile {
+
+    margin-left: 150px;
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #f3f0f0;
+
 }
 
-.profile-info {
+.info {
     margin-bottom: 20px;
 }
 
 .avatar {
-    width: 50px;
+    width: 80px;
     height: px;
     border-radius: 50%;
 }
@@ -37,8 +40,14 @@
     justify-content: space-between;
 }
 
-.stats-li {
+.item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 14px;
+}
+
+.itemInfo {
+    font-size: 14px;
+    font-weight: bold;
 }

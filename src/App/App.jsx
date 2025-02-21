@@ -1,9 +1,29 @@
 import { useState } from 'react'
-import reactLogo from '../../assets/react.svg'
+import reactLogo from '.././assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.module.css'
-import Profile from '../Profile/Profile'
-import userData from '../../userData.json'
+import Profile from '../components/Profile/Profile'
+import userData from '../userData.json'
+import Friends from '../components/FriendList/FriendList'
+import dataFriends from '../friends.json'
+
+
+
+export default function App() {
+  return (
+    <>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+      <FriendList friends={friends} />
+    </>
+  );
+};
+
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -33,22 +53,3 @@ import userData from '../../userData.json'
 //     </>
 //   )
 // }
-
-
-
-const App = () => {
-  return (
-    <>
-      <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-      />
-    </>
-  );
-};
-
-export default App;
-
