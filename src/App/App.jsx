@@ -4,8 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.module.css'
 import Profile from '../components/Profile/Profile'
 import userData from '../userData.json'
-import Friends from '../components/FriendList/FriendList'
+import FriendList from '../components/FriendList/FriendList'
 import dataFriends from '../friends.json'
+import transactions from '..//transactions.json'
+import TransactionHistory from '..//components/TransactionHistory/TransactionHistory'
 
 
 
@@ -19,7 +21,8 @@ export default function App() {
         image={userData.avatar}
         stats={userData.stats}
       />
-      <FriendList friends={friends} />
+      <FriendList friends={dataFriends} />
+      <TransactionHistory items={transactions} />
     </>
   );
 };
